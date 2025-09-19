@@ -9,7 +9,7 @@ def fit_model(X_train, y_train, X_test, y_test):
     """
     Train a Logistic Regression model and save it.
     """
-    log_reg = LogisticRegression(max_iter=1000, random_state=12)
+    log_reg = LogisticRegression(max_iter=5000, random_state=12)
     log_reg.fit(X_train, y_train)
 
     # Evaluate
