@@ -1,13 +1,11 @@
+# predict.py
 import joblib
+
 
 def predict_data(X):
     """
-    Predict the class labels for the input data.
-    Args:
-        X (numpy.ndarray): Input data for which predictions are to be made.
-    Returns:
-        y_pred (numpy.ndarray): Predicted class labels.
+    Predict wine class for given features.
     """
-    model = joblib.load("../model/iris_model.pkl")
-    y_pred = model.predict(X)
-    return y_pred
+    model = joblib.load("../model/wine_model.pkl")  # load once
+
+    return model.predict(X)
