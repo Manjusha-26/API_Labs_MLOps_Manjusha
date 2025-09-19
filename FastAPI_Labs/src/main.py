@@ -35,6 +35,7 @@ class WineResponse(BaseModel):
 async def health_ping():
     return {"status": "healthy"}
 
+
 # Prediction
 @app.post("/predict", response_model=WineResponse)
 async def predict_wine(wine_features: WineData):
